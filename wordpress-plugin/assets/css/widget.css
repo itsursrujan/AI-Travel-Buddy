@@ -1,0 +1,243 @@
+/**
+ * AI Travel Buddy Widget Styles
+ */
+
+.atb-travel-planner-widget {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    max-width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.atb-widget-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    min-height: 400px;
+}
+
+/* Dark theme */
+.atb-travel-planner-widget[data-theme="dark"] .atb-widget-container {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+/* Auto theme (follows site theme) */
+.atb-travel-planner-widget[data-theme="auto"] .atb-widget-container {
+    background: inherit;
+    color: inherit;
+}
+
+/* Loading state */
+.atb-loading {
+    text-align: center;
+    padding: 40px;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* Form styles */
+.atb-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.atb-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.atb-form-group label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-form-group label {
+    color: #d1d5db;
+}
+
+.atb-form-group input,
+.atb-form-group select {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    background: #ffffff;
+    color: #111827;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-form-group input,
+.atb-travel-planner-widget[data-theme="dark"] .atb-form-group select {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+.atb-form-group input:focus,
+.atb-form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.atb-form-group input::placeholder {
+    color: #9ca3af;
+}
+
+/* Button styles */
+.atb-button {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.atb-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.atb-button:active {
+    transform: translateY(0);
+}
+
+.atb-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Error message */
+.atb-error {
+    padding: 12px;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    color: #991b1b;
+    margin-bottom: 16px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-error {
+    background: #7f1d1d;
+    border-color: #991b1b;
+    color: #fecaca;
+}
+
+/* Success message */
+.atb-success {
+    padding: 12px;
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    color: #065f46;
+    margin-bottom: 16px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-success {
+    background: #064e3b;
+    border-color: #065f46;
+    color: #a7f3d0;
+}
+
+/* Itinerary display */
+.atb-itinerary {
+    margin-top: 24px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-itinerary {
+    background: #374151;
+}
+
+.atb-itinerary-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-itinerary-title {
+    color: #f9fafb;
+}
+
+.atb-day-section {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-day-section {
+    background: #4b5563;
+}
+
+.atb-day-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-day-title {
+    color: #f9fafb;
+}
+
+.atb-activity {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f3f4f6;
+    border-radius: 6px;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-activity {
+    background: #1f2937;
+}
+
+.atb-activity-time {
+    font-weight: 600;
+    color: #3b82f6;
+    margin-right: 8px;
+}
+
+.atb-activity-name {
+    color: #374151;
+}
+
+.atb-travel-planner-widget[data-theme="dark"] .atb-activity-name {
+    color: #d1d5db;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .atb-widget-container {
+        padding: 16px;
+    }
+    
+    .atb-form-group input,
+    .atb-form-group select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Grid layout for form */
+@media (min-width: 640px) {
+    .atb-form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
